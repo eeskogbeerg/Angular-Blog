@@ -1,0 +1,21 @@
+<!-- Blog Post Form -->
+<form [formGroup]="blogPostForm" (ngSubmit)="onSubmit()">
+    <!-- Title Input -->
+    <label for="title">Titel:</label>
+    <input type="text" id="title" formControlName="title" required>
+  
+    <!-- Thumbnail URL Input -->
+    <label for="thumbnailUrl">Bild 1:</label>
+    <input type="text" id="thumbnailUrl" formControlName="thumbnailUrl" required>
+  
+    <!-- Second Image URL Input (Optional) -->
+    <label for="secondImageUrl">Bild 2 (frivilligt):</label>
+    <input type="text" id="secondImageUrl" formControlName="secondImageUrl">
+  
+    <!-- Body Textarea -->
+    <label for="body">Innehåll:</label>
+    <textarea id="body" formControlName="body" required></textarea>
+  
+    <!-- Submit Button -->
+    <button type="submit">Lägg till</button>
+</form>

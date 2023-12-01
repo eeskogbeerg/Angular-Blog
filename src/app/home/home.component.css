@@ -1,0 +1,78 @@
+/* Styling for the blog post container using CSS Grid for responsive columns */
+.blog-post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Styling for individual blog post wrappers */
+.blog-post-wrapper {
+  position: relative;
+  border: 1px solid #9e8888a4;
+  background-color: rgb(247, 247, 239);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  margin: 20px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Hover effect for individual blog post wrappers */
+.blog-post-wrapper:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Styling for images within blog posts */
+.img {
+  max-width: 150px;
+  max-height: 200px;
+  display: block;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+
+/* Styling for blog post titles */
+.blog-post-wrapper h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Container for buttons within each blog post */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Styling for the "View Details" button */
+.view-details {
+  background-color: #9e8888;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the "View Details" button */
+.view-details:hover {
+  background-color: #9e8888c7;
+}
+
+/* Styling for the button to delete a blog post */
+.delete-post button {
+  background-color: #9e8888;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the delete button */
+.delete-post button:hover {
+  background-color: #9e8888c7;
+}

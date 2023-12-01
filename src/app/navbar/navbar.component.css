@@ -1,0 +1,70 @@
+/* Styling for the navigation bar */
+.navbar {
+    background-color: rgb(247, 247, 239);
+    color: black;
+    padding: 10px;
+    display: flex;
+    font-family: 'Vina Sans', sans-serif;
+}
+
+/* Style for "User" and "Owner" links */
+.nav-item-left {
+    cursor: pointer;
+}
+
+/* Center "About Me" and "Home" links */
+.nav-center-container {
+    display: flex;
+    flex: 1; 
+    align-items: center;
+    justify-content: center; 
+}
+
+/* Styles for "About Me" and "Home" links */
+.nav-item {
+    cursor: pointer;
+    margin-right: 90px; 
+    margin-left: -40px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Hover effect for "User" and "Owner" links */
+.nav-item-left:hover {
+    color: orange;
+}
+
+/* Change text color and underline color on hover for "About Me" link */
+.nav-item:first-child:hover {
+    border-bottom: 2px solid orange; 
+}
+
+/* Change underline color on hover for "Home" link */
+.nav-item:last-child:hover {
+    border-bottom: 2px solid orange; 
+}
+
+/* Add new post button */
+.add-post {
+    margin-left: 30px;
+    margin-top: 28px;
+}
+
+.add-post button {
+    background-color: rgb(247, 247, 239);
+    border: none;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    color: black;
+    font-family: 'Vina Sans', sans-serif;
+    font-size: 15px;
+}
+
+.add-post button:hover {
+    border-bottom: 2px solid orange; 
+}

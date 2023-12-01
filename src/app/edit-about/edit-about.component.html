@@ -1,0 +1,23 @@
+<!-- Conditional rendering of the edit form based on the result of shouldShowForm() -->
+<div *ngIf="shouldShowForm()" class="edit-form">
+  <!-- Container for the edit about form -->
+  <div class="edit-about-form">
+      <!-- Heading for the edit about form -->
+      <h2>Redigera Om mig</h2>
+      
+      <!-- Form for submitting edited about content -->
+      <form (ngSubmit)="saveAbout()">
+          <!-- Form group for the about content textarea -->
+          <div class="form-group">
+              <!-- Label for the about content textarea -->
+              <label for="aboutContent">Om mig</label>
+              
+              <!-- Textarea for editing and displaying the about content -->
+              <textarea id="aboutContent" name="aboutContent" [(ngModel)]="aboutContent"></textarea>
+          </div>
+          
+          <!-- Button to submit and save the edited about content -->
+          <button type="submit">Spara</button>
+      </form>
+  </div>
+</div>

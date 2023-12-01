@@ -1,0 +1,16 @@
+/* Styling for footer */
+.footer {
+  background-color: rgb(247, 247, 239);
+  color: black;
+  margin-top: 20px;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  margin-bottom: 5px;
+  font-family: 'Vina Sans', sans-serif;
+}

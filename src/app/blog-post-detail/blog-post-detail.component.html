@@ -1,0 +1,50 @@
+<!-- Blog Post Section -->
+<div class="blog-post" *ngIf="post">
+  <h2>{{ post.title }}</h2>
+  <div class="blog-content">
+    <!-- Image Container -->
+    <div class="image-container">
+      <!-- First Image -->
+      <img *ngIf="post.thumbnailUrl" class="img1" [src]="post.thumbnailUrl" alt="{{ post.title }}">
+      <!-- Second Image -->
+      <img *ngIf="post.secondImageUrl" class="img2" [src]="post.secondImageUrl" alt="{{ post.title }}">
+    </div>
+    <!-- Text Container Wrapper -->
+    <div class="text-container-wrapper">
+      <!-- Text Container -->
+      <div class="text-container">
+        <p>{{ post.body }}</p>
+        <h3 class="created-date">Creation Date: {{ post.creationDate | date:'medium' }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Like and Dislike Buttons -->
+<div class="like-dislike-buttons">
+  <button (click)="likePost()" class="like-button">Like</button>
+  <span> {{ post.likes }}</span>
+  <button (click)="dislikePost()" class="dislike-button">Dislike</button>
+  <span> {{ post.dislikes }}</span>
+</div>
+
+<!-- Comments Section -->
+<div class="comments-section">
+  <h3>Comments</h3>
+  <!-- Comment Groups -->
+  <div class="comment-groups">
+    <!-- Individual Comment -->
+    <div class="comment" *ngFor="let comment of post.comments; let i = index">
+      {{ comment }}
+    </div>
+  </div>
+</div>
+
+<!-- Comment Input Section -->
+<div class="comment-input-section">
+  <h3>Add a Comment</h3>
+  <!-- Comment Input Textarea -->
+  <textarea [(ngModel)]="newComment" placeholder="Enter your comment" class="comment-input"></textarea>
+  <!-- Add Comment Button -->
+  <button (click)="addComment()" class="add-comment-btn">Add Comment</button>
+</div>

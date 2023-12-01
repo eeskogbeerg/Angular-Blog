@@ -1,0 +1,43 @@
+<!-- Container for the about section -->
+<div class="about-container">
+  <!-- Title for the about section -->
+  <h2 class="about-title">Om mig</h2>
+  
+  <!-- Content for the about section (dynamic content from 'aboutContent' variable) -->
+  <p class="about-content">{{ aboutContent }}</p>
+
+  <!-- Button to edit the about section, visible only in owner's perspective -->
+  <button *ngIf="blogService.isOwnerPerspective()" (click)="editAbout()">Redigera Om mig</button>
+
+  <!-- Contact form section -->
+  <div class="about-contact-form">
+      <!-- Title for the contact form -->
+      <h3>Kontakta mig</h3>
+      
+      <!-- Form for submitting contact information -->
+      <form (ngSubmit)="submitContactForm()">
+          <!-- Input field for name -->
+          <div class="form-group">
+              <label for="name">Namn</label>
+              <input type="text" id="name" name="name" [(ngModel)]="contactName">
+          </div>
+
+          <!-- Input field for email -->
+          <div class="form-group">
+              <label for="email">E-post</label>
+              <input type="email" id="email" name="email" [(ngModel)]="contactEmail">
+          </div>
+
+          <!-- Textarea for the message -->
+          <div class="form-group">
+              <label for="message">Meddelande</label>
+              <textarea id="message" name="message" [(ngModel)]="contactMessage"></textarea>
+          </div>
+
+          <!-- Submit button for the contact form -->
+          <button type="submit">Skicka</button>
+      </form>
+  </div>
+</div>
+
+  
